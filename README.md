@@ -43,3 +43,31 @@ O projeto foi desenvolvido com o objetivo de ajudar jogadores a aprenderem nades
 
 ---
 ## 📂 Estrutura do Projeto
+counter-guide/
+├── backend/
+│   ├── cs2_tutorials.db
+│   └── index.js
+├── frontend/
+│   ├── assets/
+│   ├── index.html
+│   ├── cs2-maps.html
+│   ├── *-tutorials.html
+│   ├── styles.css
+│   └── script.js
+└── README.md
+
+---
+## 👨‍💻 Autor
+
+**Alisson Barreto**
+- GitHub: [AlissonBarreto10](https://github.com/AlissonBarreto10)
+- Instagram: [@alissonjbs](https://instagram.com/alissonjbs)
+
+---
+## 📝 Licença
+
+Projeto educacional - Todos os direitos reservados © 2026
+
+---
+
+⭐ **Se gostou, deixe uma estrela no repositório!**
