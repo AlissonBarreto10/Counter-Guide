@@ -44,16 +44,17 @@ O projeto foi desenvolvido com o objetivo de ajudar jogadores a aprenderem nades
 ---
 ## 📂 Estrutura do Projeto
 counter-guide/
+counter-guide/
 ├── backend/
-│   ├── cs2_tutorials.db
-│   └── index.js
+│   ├── cs2_tutorials.db          # Banco de dados
+│   └── index.js                  # Servidor
 ├── frontend/
-│   ├── assets/
-│   ├── index.html
-│   ├── cs2-maps.html
-│   ├── *-tutorials.html
-│   ├── styles.css
-│   └── script.js
+│   ├── assets/                   # Imagens e banners
+│   ├── index.html                # Página inicial
+│   ├── cs2-maps.html             # Seleção de mapas
+│   ├── *-tutorials.html          # Páginas de tutoriais
+│   ├── styles.css                # Estilos
+│   └── script.js                 # Lógica JavaScript
 └── README.md
 
 ---
