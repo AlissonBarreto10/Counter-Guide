@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     };
 
-    // Load tutorials
+    // Load tutorials from local JSON
     const loadTutorials = (type = 'smoke') => {
         const pageTitleElement = document.querySelector('.page-title span');
         if (!pageTitleElement) return;
@@ -54,13 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!ctContainer || !trContainer) return;
 
-        fetch(`/api/tutorials/cs2/${mapName}`)
+        fetch('data.json')
             .then(response => response.json())
-            .then(tutorials => {
+            .then(data => {
+                const tutorials = data.tutorials || [];
+
                 ctContainer.innerHTML = '';
                 trContainer.innerHTML = '';
 
-                const filtered = tutorials.filter(t => t.type === type);
+                const filtered = tutorials.filter(t =>
+                    t.map === mapName && t.type === type
+                );
 
                 const ctTutorials = filtered.filter(t => t.side === 'ct');
                 const trTutorials = filtered.filter(t => t.side === 'tr');
@@ -77,7 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     trContainer.innerHTML = '<p class="no-tutorials-message">Nenhum tutorial encontrado (TR).</p>';
                 }
             })
-            .catch(error => console.error('Erro ao buscar tutoriais:', error));
+            .catch(error => {
+                console.error('Erro ao carregar dados:', error);
+                ctContainer.innerHTML = '<p class="no-tutorials-message">Erro ao carregar tutoriais.</p>';
+                trContainer.innerHTML = '<p class="no-tutorials-message">Erro ao carregar tutoriais.</p>';
+            });
     };
 
     // Initial load
