@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalTitle) modalTitle.textContent = title;
         // A linha abaixo cria o player do YouTube
         if (videoPlayer) videoPlayer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-        if (modal ) modal.style.display = 'flex'; // Usa 'flex' para centralizar
+        if (modal) modal.style.display = 'flex'; // Usa 'flex' para centralizar
     };
 
     // ===================================================================
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===================================================================
     const pageTitleElement = document.querySelector('.page-title span');
     if (pageTitleElement && window.location.pathname.includes('-tutorials.html')) {
-        
+
         const mapName = pageTitleElement.textContent.toLowerCase().replace(/\s+/g, '');
         const ctContainer = document.getElementById('ct-tutorials');
         const trContainer = document.getElementById('tr-tutorials');

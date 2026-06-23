@@ -1,12 +1,17 @@
 {
-  "name": "cs-tutorials-site",
+  "name": "counter-guide",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Guias rápidos de utilitários para Counter-Strike 2",
+  "main": "backend/index.js",
   "scripts": {
     "start": "node backend/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "cs2",
+    "counter-strike",
+    "smokes",
+    "flashbangs"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
