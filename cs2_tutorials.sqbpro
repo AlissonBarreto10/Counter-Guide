@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Alisson Barreto/OneDrive/Área de Trabalho/Documentos/backend/cs2_tutorials.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="254"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="sqlite_sequence" custom_title="0" dock_id="1" table="4,15:mainsqlite_sequence"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000011e00ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">-- PASSO 1: Cria a NOVA tabela com a estrutura correta para o projeto de vídeos curtos.
+CREATE TABLE tutorials (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    map VARCHAR(50) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    side VARCHAR(10) NOT NULL,
+    name VARCHAR(200) NOT NULL,
+    platform VARCHAR(20) NOT NULL,
+    video_id VARCHAR(100) NOT NULL,
+    tags TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    views INTEGER DEFAULT 0
+);
+
+-- PASSO 2: Insere os 12 tutoriais na tabela recém-criada.
+INSERT INTO tutorials (map, category, side, name, platform, video_id, tags) VALUES
+('dust2', 'smoke', 'TR', 'Smoke Xbox (da Base TR)', 'youtube', 'feM8aJFU5lw', 'xbox, caixote, xiboca, meio, mid, ligação, short'),
+('dust2', 'smoke', 'TR', 'Smoke Porta do Meio (do Topo do Meio)', 'youtube', 'lnbVqyNMFfc', 'meio, mid, porta, double door, ligação, short'),
+('dust2', 'smoke', 'TR', 'Smoke Passagem CT (do Topo do Meio)', 'youtube', 'QOpIu4o-Vhk', 'passagem ct, base ct, spawn ct, meio, mid'),
+('dust2', 'smoke', 'TR', 'Smoke para Cruzar para o Bomb A', 'tiktok', '7369336195593145606', 'bomb a, site a, cruzamento, passagem, porta'),
+('dust2', 'smoke', 'TR', 'Smoke Canto Esquerdo do Bomb A (Varanda)', 'youtube', 'x-B7rWYCgjA', 'bomb a, site a, canto, esquerda, ninja, graffiti, varanda'),
+('dust2', 'smoke', 'TR', 'Smoke para Cruzar para o Bomb B (do Túnel)', 'youtube', 'qTHBc2ypo8M', 'bomb b, site b, túnel, escuro, cruzamento, passagem'),
+('dust2', 'smoke', 'CT', 'Smoke Fundo Falso / Suicídio (do Meio)', 'youtube', 'kQC2EfAfsVc', 'suicídio, fundo falso, túnel, meio, mid'),
+('dust2', 'smoke', 'TR', 'Smoke Meio para o Bomb B (Avançada)', 'youtube', 'Zhw8O2Wz57I', 'meio, mid, bomb b, site b, avanço, agressiva'),
+('dust2', 'smoke', 'TR', 'Smoke Long Corner (Canto do Fundo)', 'youtube', 'iOTG4MCHhgk', 'fundo, long, canto, varanda, pit, l, geladeira'),
+('dust2', 'smoke', 'CT', 'Smoke Porta do Fundo (Defensiva)', 'youtube', 'rUlqyGsSoVw', 'fundo, long, porta, defensiva, bomb a, site a'),
+('dust2', 'smoke', 'TR', 'Smoke Porta do Bomb B (Rush)', 'youtube', '25ZtrNN9GLU', 'bomb b, site b, porta, rush, túnel, escuro'),
+('dust2', 'smoke', 'TR', 'Smoke Janela do Bomb B (Lurk)', 'youtube', 'R7LKt7ALz5Y', 'bomb b, site b, janela, window, lurk, túnel');
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

@@ -1,0 +1,21 @@
+{
+  "name": "counter-guide",
+  "version": "1.0.0",
+  "description": "Guias rápidos de utilitários para Counter-Strike 2",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "node backend/index.js"
+  },
+  "keywords": [
+    "cs2",
+    "counter-strike",
+    "smokes",
+    "flashbangs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
